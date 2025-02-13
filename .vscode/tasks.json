@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build with ROHC",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/ex.cpp",  // Replace with your source files
+                "-I./rohc-windows/include/rohc",  // Include ROHC headers
+                "-L./rohc-windows/bin",  // Library path for linker
+                "-lrohc",  // Link against the ROHC library
+                "-o",
+                "${workspaceFolder}"  // Output file path
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building with ROHC"
+        }
+    ]
+}
